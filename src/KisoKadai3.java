@@ -177,7 +177,7 @@ public class KisoKadai3 {
 			else if (fin.equals("No") || fin.equals("no")) {
 				// ファイルの追記;
 				System.out.println("追記の場合は1、上書きは2、終了は3の入力をお願いします。?");
-				while (true)
+				while (true){
 					try {
 						String num = null;
 						BufferedReader numbr = new BufferedReader(new InputStreamReader(System.in));
@@ -193,6 +193,7 @@ public class KisoKadai3 {
 								FileWriter editfw = new FileWriter(file, true);
 								editfw.write(edit);
 								editfw.close();
+								break;
 							}
 							catch (Exception e) {
 								System.out.println("エラーです。");
@@ -209,6 +210,7 @@ public class KisoKadai3 {
 								FileWriter overwritefw = new FileWriter(file, false);
 								overwritefw.write(overwrite);
 								overwritefw.close();
+								break;
 							}
 							catch (Exception e) {
 								System.out.println("エラーです。");
@@ -223,18 +225,19 @@ public class KisoKadai3 {
 						}
 						else{
 							System.out.println("入力が読み取れませんでした。\r\n1～3で再度入力をお願いいたします。");
-
+							continue;
+						}
 					}
-					}
-
-				}
 				catch (Exception e) {
-					System.out.println("エラーです。");
+					System.out.println("入力が読み取れませんでした。\r\n1～3で再度入力をお願いいたします。");
+					continue;
 				}
-
+				}
 
 				}
 			else {// ファイルの追記の例外。
+				System.out.println("入力が読み取れませんでした。\r\nYes or Noでの返答をお願いいたします。");
+				continue;
 			}
 
 
