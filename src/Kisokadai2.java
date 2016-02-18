@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Kisokadai2new {
+public class Kisokadai2 {
 	public static void main(String[] args) {
 
 		// 乱数の作成
