@@ -11,7 +11,7 @@ public class Kisokadai1 {
 		str = br.readLine();
 		}
 			catch ( Exception e ) {
-			e.printStackTrace();
+			System.out.println("エラーです。");
 			}
 		int x = Integer.parseInt(str);
 
@@ -22,7 +22,7 @@ public class Kisokadai1 {
 					Beside = br.readLine();
 				}
 					catch( Exception e ){
-					e.printStackTrace();
+					System.out.println("エラーです。");
 					}
 						int y = Integer.parseInt(Beside);
 							for (int a = 1 ; a <= x  ; a ++){

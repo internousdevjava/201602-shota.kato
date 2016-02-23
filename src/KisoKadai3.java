@@ -20,7 +20,6 @@ public class KisoKadai3 {
 				while (true) {
 					folder = br.readLine();
 					file = new File(folder);
-					file.createNewFile();
 				// 新規でファイルを作成したかどうか
 
 					if (file.createNewFile()) {
